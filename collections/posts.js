@@ -30,7 +30,7 @@ Meteor.methods({
 
 		// wait for 5 seconds
 		if (!this.isSimulation) {
-			var Future = Npm.require('fiber/future');
+			var Future = Npm.require('fibers/future');
 			var future = new Future();
 			Meteor.setTimeout(function() {
 				future.return();
@@ -39,7 +39,7 @@ Meteor.methods({
 		}
 
 		var postId = Posts.insert(post);
-		
+
 		return postId;
 	}
 });
