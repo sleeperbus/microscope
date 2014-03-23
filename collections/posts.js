@@ -39,7 +39,6 @@ Meteor.methods({
 		}
 
 		var postId = Posts.insert(post);
-
 		return postId;
 	}
 });
