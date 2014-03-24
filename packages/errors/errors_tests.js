@@ -1,4 +1,4 @@
-Tinytest.add("Errors collection works", function() {
+Tinytest.add("Errors collection works", function(test) {
     test.equal(Errors.collection.find({}).count(), 0);
 
     Errors.throw('A new error!');
