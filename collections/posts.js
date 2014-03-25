@@ -38,7 +38,8 @@ Meteor.methods({
 			title: postAttributes.title + (this.isSimulation? '(client)' : '(server)'),
 			userId: user._id,
 			author: user.username,
-			submmitted: new Date().getTime()
+			submmitted: new Date().getTime(),
+			commentsCount: 0
 		});
 
 		// wait for 5 seconds
